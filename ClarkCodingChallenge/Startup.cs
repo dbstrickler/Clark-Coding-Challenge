@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-
+using ClarkCodingChallenge.Models;
 namespace ClarkCodingChallenge
 {
     public class Startup
@@ -28,6 +28,8 @@ namespace ClarkCodingChallenge
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            services.AddScoped<IProfilesRepository, ProfilesRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

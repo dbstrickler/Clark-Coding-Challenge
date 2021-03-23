@@ -1,7 +1,28 @@
 ﻿@{
     ViewData["Title"] = "Contacts Page";
 }
+@section Scripts{
+    <script src="~/js/site.js"></script>
+}
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
+
+    <div>
+        <label for="firstName">
+            <input type="text" name="lirstName" id="firstName" />
+        </label>
+
+        <label for="lastName">
+            <input type="text" name="lastName" id="LastName" />
+        </label>
+
+        <label for="email">
+            <input type="email" name="email" id="email" />
+        </label>
+    </div>
+
+    <button onclick="submitProfile()" class="button" id="SubmitButton">
+        Submit
+    </button>
 </div>
